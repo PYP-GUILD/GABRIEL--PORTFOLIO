@@ -1,0 +1,221 @@
+/* Global / Reset */
+:root{
+  --bg:#313647;
+  --nav:#435663;
+  --text:#ffffff;
+  --accent:#00d1ff;
+  --max-width:1300px;
+}
+*{box-sizing:border-box}
+.container{max-width:var(--max-width);margin:0 auto;padding:.6rem}
+
+/* Make the page use a column flex layout so footer can stick to the bottom on short pages */
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Inter, Poppins, Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;letter-spacing:0.2px;}
+body{display:flex;flex-direction:column;min-height:100vh}
+main{flex:1}
+
+.site-nav{background:var(--nav);border-bottom:1px solid rgba(255,255,255,0.03)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{color:var(--accent);text-decoration:none;font-weight:700}
+.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.nav-links a{color:var(--text);text-decoration:none;transition:color .18s ease, transform .12s ease}
+
+/* Ensure nav links are always visible (desktop and mobile) */
+.site-nav .nav-links a,
+.site-nav .nav-links a:visited,
+.nav-links.show a{
+  color:var(--text);
+}
+
+/* Link interaction states: hover, focus, active (pressed) for all pages */
+.nav-links a:hover,.nav-links a:focus{color:var(--accent);transform:translateY(-1px);outline:none}
+.nav-links a:active{ 
+  color:#00a0cc;
+  transform:translateY(-12px);
+
+}
+
+/* Keyboard focus visible (better accessibility) */
+.nav-links a:focus-visible{outline:3px solid rgba(0,209,255,0.15);outline-offset:4px;border-radius:6px}
+
+/* Mark current page link */
+.nav-links a.current,
+.nav-links a[aria-current="page"],
+.nav-inner .nav-links a.current,
+.nav-inner .nav-links a[aria-current="page"]{
+  color:var(--accent);
+  font-weight:700;
+}
+
+/* Mirror for footer nav (keep consistent) */
+.footer-nav a.current,.footer-nav a[aria-current="page"]{color:var(--accent);font-weight:700}
+.nav-toggle{display:none;background:transparent;border:none;color:var(--text);font-size:1.4rem}
+.nav-toggle:focus{outline:2px solid rgba(0,209,255,0.25);outline-offset:3px;border-radius:6px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:center;padding:2rem .6rem}
+.hero-left h2{margin:0 0 .5rem 0;font-family:'Poppins', 'Montserrat', 'Roboto Condensed', sans-serif}
+.bio{opacity:0.9}
+.btn{display:inline-block;padding:.6rem 1rem;background:linear-gradient(90deg,var(--accent),#00a8d9);color:#000;border-radius:6px;text-decoration:none;font-weight:600}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);padding:.55rem .95rem;margin-left:.6rem}
+.btn.secondary:hover{background:rgba(255,255,255,0.02);border-color:rgba(0,209,255,0.12);color:var(--accent)}
+.btn + .btn{margin-left:.6rem}
+.hero-right{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.profile{width:160px;height:160px;object-fit:cover;border-radius:999px;border:3px solid rgba(0,209,255,0.12)}
+.profile.nudged{transform:translateY(-12px)}
+.skills-list{list-style:none;padding:0;margin:0;text-align:left}
+.skills-list.moved{margin-top:1rem}
+.skills-list li{background:rgba(255,255,255,0.03);padding:.4rem .6rem;border-radius:6px;margin-bottom:.4rem}
+
+/* About page skill badges */
+.skill-list{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.skill-list li{margin:0}
+.skill-badge{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--text);border:1px solid rgba(255,255,255,0.04);font-weight:600;cursor:default}
+.skill-badge:hover{background:rgba(0,209,255,0.08);border-color:rgba(0,209,255,0.18);color:var(--accent)}
+
+/* Projects */
+.projects-page h1{margin-top:1rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.project-card{
+  background:rgba(255,255,255,0.03);
+  padding:1rem;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+ }
+
+.project-card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:6px;
+  gap:0.3em;
+}
+.tech-tags{margin-top:.6rem}
+.tech-tag{display:inline-block;background:rgba(0,209,255,0.12);color:var(--accent);padding:.2rem .4rem;border-radius:4px;font-size:.85rem;margin-right:.4rem}
+
+/* Improve paragraph alignment inside project cards */
+.project-card p{
+  margin:.6rem 0 0;
+  line-height:1.55;
+  letter-spacing:0.12px;
+}
+.project-card h3{margin-top:.6rem;margin-bottom:.4rem}
+
+/* About */
+.two-col{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start}
+.skills{align-self:start;margin-top:0}
+.education h2,.skills h2{margin-top:0}
+
+/* Contact */
+.contact-header h1{margin:0 0 .25rem}
+.contact-header p{margin:0 0 1rem;opacity:0.95}
+
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start}
+.contact-form{display:block}
+.contact-form .form-row{margin-bottom:.75rem}
+.contact-form label{display:block;margin-bottom:.25rem;font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+
+/* Make the message textarea text match other inputs (use --text) and soften the placeholder */
+.contact-form textarea{color:var(--text);background:transparent}
+.contact-form textarea::placeholder{color:rgba(255,255,255,0.6)}
+
+/* Ensure the small 'Message me' button in the contact-info card shows black text (override earlier link color) */
+.contact-info.card .btn{color:#000}
+.form-actions{display:flex;gap:.75rem;align-items:center}
+.form-status{color:var(--accent);font-weight:700}
+.contact-info.card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:8px}
+.contact-info.card h2{margin-top:0}
+.contact-info.card a{color:var(--accent);text-decoration:none}
+.contact-info.card p{margin:.6rem 0}
+
+/* contact page info item */
+.info-item{background:rgba(255,255,255,0.01);padding:.6rem;border-radius:6px;margin:.6rem 0}
+.info-item h3{margin:.2rem 0 .35rem}
+.info-item .info-btn{margin-top:.4rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .two-col{grid-template-columns:1fr;}
+  .nav-toggle{display:block}
+  .nav-links{display:none;flex-direction:column;background:var(--nav);position:absolute;right:1rem;top:56px;padding:1rem;border-radius:8px}
+  .nav-links.show{display:flex}
+}
+
+/* Footer */
+.site-footer{background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.25));border-top:1px solid rgba(255,255,255,0.03);padding:.4rem 0;margin-top:0}
+.footer-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+.footer-brand{color:var(--accent);font-weight:700}
+.footer-nav{display:flex;gap:.75rem}
+.footer-nav a{color:rgba(255,255,255,0.85);text-decoration:none}
+.footer-meta{opacity:0.9;font-size:.95rem}
+
+/* Back to top */
+.back-to-top{position:fixed;right:1rem;bottom:1rem;background:var(--accent);color:#000;border:0;padding:.6rem .7rem;border-radius:999px;display:none;box-shadow:0 6px 18px rgba(0,0,0,0.5);cursor:pointer}
+.back-to-top.show{display:block}
+
+@media (max-width:700px){
+  .footer-inner{flex-direction:column;gap:.5rem;text-align:center}
+}
+
+/* Slideshow */
+.slideshow{position:relative;max-width:var(--max-width);margin:1rem auto;padding:0 .6rem}
+.slides{position:relative;overflow:hidden;border-radius:8px}
+.slide{display:none}
+.slide img{width:100%;height:260px;object-fit:cover;display:block}
+.slide.active{display:block}
+.slideshow .prev,.slideshow .next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:var(--text);border:0;padding:.5rem .8rem;border-radius:6px;cursor:pointer}
+.slideshow .prev{left:1rem}
+.slideshow .next{right:1rem}
+.dots{display:flex;gap:.5rem;justify-content:center;padding:.6rem 0}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,0.2);cursor:pointer}
+.dots button.active{background:var(--accent)}
+
+@media (max-width:700px){
+  .slide img{height:160px}
+}
+
+/* Gallery under skills */
+.hero-gallery{margin:2rem auto;padding:0 1rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:center}
+.gallery-grid a{display:block;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+.gallery-grid img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .25s ease}
+.gallery-grid a:hover img{transform:scale(1.03)}
+
+@media (max-width:900px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid img{height:160px}
+}
+@media (max-width:520px){
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-grid img{height:220px}
+}
+
+/* Reduce spacing so slideshow/gallery sits directly above the footer */
+.hero-gallery.slideshow{margin:0 auto;padding:0 1rem 0;margin-top:0}
+.hero-gallery.slideshow .slides{border-radius:8px}
+.hero-gallery .slide img{
+  /* responsive height that adapts to viewport width */
+  height: clamp(160px, 20vw, 260px);
+}
+
+/* Make the section heading tighter and centered so slideshow aligns visually */
+.hero-gallery h3{margin-top:0;margin-bottom:.35rem;color:var(--text);text-align:center;font-weight:700}
+
+/* Remove extra bottom spacing inside slides so gallery hugs footer */
+.hero-gallery .slides{margin-bottom:0}
+
+/* Tweak footer spacing so it sits right below the gallery */
+.site-footer{
+  margin-top:60px;
+  padding-top:0;
+}
+
+@media (max-width:900px){
+  .hero-gallery .slide img{height:180px}
+}
+@media (max-width:520px){
+  .hero-gallery .slide img{height:200px}
+}

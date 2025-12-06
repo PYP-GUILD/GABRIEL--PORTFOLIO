@@ -1,0 +1,101 @@
+GABRIEL’S Student Portfolio
+
+1. CONTEXT
+● Objective: Create a clean, modern, static portfolio website for a student.
+● Technologies: HTML, CSS, JavaScript (if needed for interactivity).
+● Primary Audience:Teachers,instructors and college students
+
+2. STYLING &THEME
+● Color Palette:
+○ Background Color:#0a0a0a
+○ Text Color: #ffffff
+○ Primary/Accent Color: #00d1ff
+○ Navbar Color:#111111
+● Typography:
+                    ○ Headings (H1, H2):Poppins,Montserrat,or  Roboto condensed
+                    ○ Body Text:Poppins,Inter or Roboto
+● Layout:
+             Max width:1100px
+             Centred content using: Margin: 0 auto;
+3. SITE STRUCTURE(Navigate)
+The website must have these four pages, accessible from a navigation bar on every page:
+● index.html (Home)
+● projects.html (My Work)
+● about.html (About / Resume)
+● contact.html (Contact)
+4. PAGE SPECIFICATIONS
+   HOME PAGE (index.html)
+● Page Title: “Home |"[Gabriel’s page]”
+● Hero Section Layout:
+
+      ○ Left Column:
+                          H2: ”[]”Gabriel
+                          H2:”About Myself”
+                         Paragraph:“2-3 sentence bio. Example:”[Excelled in computer engineering
+                  And science courses with completed hands on hardware and software projects]”
+[as a dedicated computer engineer experienced in both hardware design and software development. My passion for technology drives me to continually learn new skills and adapt to evolving industry trends.]
+
+                          Button:”View My Projects” (links to projects.html)
+   ○ Right Column:
+                            Skills: 1.HTML/CSS/Javascript
+                                      2.Canva design
+                                  3.Computer maintenance
+                                  4.Phython design
+
+           Insert: Professional headshot image (profile.jpg with alt=”[Student’s Name]”)
+
+5. PROJECTS PAGE (projects.html)   
+ ● Page Title:”My Work | [Gabriel]”
+● Layout: CSS Grid with 2-3 columns on desktop.
+● Project Card Components (Repeat for each project):
+○ Project Title: H3 - “[My webpage]”
+Project Image: [project-image.jpg] with alt=”Screenshot of [Project Name]”
+○ Description: P - “[1-2 sentence description.
+○ Example: ‘A responsive website built with HTML and CSS. Learned to structure
+layouts using Flexbox.’]”
+Tech Tags: Span tags with classes:<span class=”tech-tag”>HTML</span> <span
+class=”Tech tags”>CSS</span>
+
+6.ABOUT/RESUME PAGE (about.html)
+    ● Page Title:”About |[Gabriel]”
+
+● Two-Column Layout:
+      ○ Left Column (Education):
+                                                  H2: “Education”
+                                                  H3: “[ANCHORAGE FIELDS SCHOOL]
+                                                  P: “[2024-2025]”
+                                                  Ul: [List 1-2 achievements or relevant courses]
+   ○ Right Column (Skills):
+                                                   H2: “Skills”
+                                                   H3: “Web Development”
+                                                   Ul: [HTML, CSS, Wireframing]
+                                                   H3: “Programming”
+                                                   Ul: [Python]
+                                                   H3: “Design”
+                                                   Ul: [Canva]
+
+7.CONTACT PAGE (contact.html)
+   ● Page Title: “Contact | [Gabriel]”
+● Layout: Centered form.
+● Content:
+              ○ H1: “Always like to check”
+              ○ Form with fields:
+
+             Input: name (type=”text”, placeholder=”Gabriel”)
+Input: email (type=”email”, placeholder=”gabrielukatta@gmail.com”)
+ Text area: message (placeholder=”Tell me about your project,questions or offer”)
+  
+○ Contact Info below form:
+ P: Email:“[gabrielukatta@gmail.com]”
+P: “GitHub: [ github-GABE201P]”
+
+                                                 Final prompt
+A clean, modern student portfolio website of Gabriel, built with HTML, CSS, and optional JavaScript using github copilot with Home, Projects, About, and Contact all connected by a navigation bar.This website highlights Gabriel’s skills, projects, education, and contact information in a professional layout.
+
+The Home Page introduces Gabriel with a short bio, a hero section featuring his profile image, and a highlight of key skills such as HTML/CSS/JavaScript, Python, Canva design, and computer maintenance. A call-to-action button leads visitors to view his projects.
+The Projects Page showcases Gabriel’s work using a grid of project cards, each containing an image, description, and tech tags, displaying his experience with modern web tools.
+The About Page provides a structured layout, outlining education, achievements, and categorized skills in web development, programming, and design.
+The Contact Page includes a simple, centered form for sending messages, along with direct contact details such as Gabriel’s email and GitHub username.
+And this is styled with a unified CSS file, the portfolio has Color Palette with its uses black gradient as the Background colour, White as the text colour, Neon blue as the Accent colour, dark Gray as the navbar colour and a responsive layout that works on both desktop and mobile devices.
+
+

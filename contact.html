@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Gabriel</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Gabriel</a>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container contact-page">
+    <header class="contact-header">
+      <h1>Get in touch</h1>
+      <p>If you'd like to collaborate, ask a question, or see more work — send me a message and I'll reply as soon as I can.</p>
+    </header>
+
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form" action="#" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Gabriel" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="gabrielukatta@gmail.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+12348130017580">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project, questions or offer" rows="6" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send message</button>
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </div>
+      </form>
+
+      <aside class="contact-info card">
+        <h2>Contact Info</h2>
+        <p><strong>Email</strong><br><a href="mailto:gabrielukatta@gmail.com">gabrielukatta@gmail.com</a></p>
+        <p><strong>GitHub</strong><br><a href="https://github.com/GABE201P" target="_blank" rel="noopener">GABE201P</a></p>
+        <p><strong>Availability</strong><br>Open to internships and collaborative projects.</p>
+        <p><a class="btn" href="contact.html#contactForm">Message me</a></p>
+      </aside>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">Gabriel</div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-meta">© 2025 Gabriel ukatta • <a href="mailto:gabrielukatta@gmail.com">gabrielukatta@gmail.com</a></div>
+      </div>
+      <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+</body>
+</html>
